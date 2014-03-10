@@ -1,0 +1,39 @@
+/* /* /* @charset "utf-8";
+/* CSS Document */
+
+
+
+.form{
+padding-left:5%;
+padding-bottom:5%;
+margin-left:25%;
+width:35%;
+border-radius:5px;
+font-family:Comic Sans MS;
+font-size:120%;
+border:2px solid;
+border-color:#000;
+}
+
+
+.submit{
+font-family:Comic Sans MS;
+font-size:18px;
+color:#fff;
+margin-left:17%;
+margin-top:20px;
+background: -webkit-gradient(linear, 0% 0%, 0% 150%, from(#0040FF), to(#0080FF));
+background: -ms-linear-gradient(top, #fff 0%,#777 100%); /* IE10+ */
+background: -moz-linear-gradient(top, #fff, #777);
+width:50%;
+height:50px;
+border-radius:10px;
+border:none;
+}
+
+.submit:hover{
+background: -webkit-gradient(linear, 0% 0%, 0% 150%, from(#0080FF), to(#0040FF));
+background: -ms-linear-gradient(top, #fff 0%,#777 100%); /* IE10+ */
+background: -moz-linear-gradient(top, #fff, #777);
+cursor:pointer;
+}

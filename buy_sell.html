@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Registration</title>
+<link href="css/buy_sell.css" rel="stylesheet" type="text/css"/>
+<link href="css/styles.css" rel="stylesheet" />
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$.ajax({
+		url:'php',
+		data:'page:page',
+		dataType:'json',
+		success: function(data){
+		
+		
+		}
+	});
+});
+
+function validateForm(){
+//var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+var x=document.forms["reg"]["shares"].value;
+if(!$.isNumeric(x)){
+	alert("Enter Valid Number of Shares");
+}
+
+//var email1 = document.forms["reg"]["email_one"].value;   
+
+
+}
+</script>
+</head>
+<body>
+<div class="wrapper">
+	<table class="form">
+	<form name="reg" onsubmit="return validateForm()" method="get">		
+		<tr>
+			<td >
+			<span style="font-size:1.5em;padding-left:26%;">Round</span>
+			<table style="font-size:1.5em">
+			
+			<tr>
+				<td><input type="radio" name="round" value="1" checked /></td><td>1 &nbsp&nbsp&nbsp</td>
+				<td><input type="radio" name="round" value="2"/></td><td>2 &nbsp&nbsp&nbsp</td>
+				<td><input type="radio" name="round" value="3"/></td><td>3 &nbsp&nbsp&nbsp</td>
+				<td><input type="radio" name="round" value="4"/></td><td>4</td>
+			</tr>
+			</table>
+			</td>
+			
+		</tr>
+		<tr>
+			<td>
+				<input type="textbox" placeholder="User Name" class="fields" name="username" >
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div style="position: relative;width:80px;padding-right:40px;" >
+					<input type="text"  name="company" id="autocomplete-ajax" style="position: absolute; z-index: 2;background:transparent;" placeholder="Company"/>
+<!-- 					<input type="text"  name="company" id="autocomplete-ajax-x" disabled="disabled" style="color: #CCC; position: absolute; background: transparent; z-index: 1;" /> -->
+				</div>
+				<div id="selction-ajax"></div>
+			</td>
+		</tr>
+		<tr><td><br><br><br><br></td></tr>
+		<tr>
+
+			<td>
+				<input type="textbox" placeholder="Shares" class="fields" name="shares">
+			</td>
+		</tr>
+		<tr>
+			<td >
+			<table style="font-size:1.5em">
+			<tr>
+				<td><input type="radio" name="buy_sell" value="buy" checked/></td><td width="100">Buy</td>
+				<td>&nbsp &nbsp&nbsp&nbsp&nbsp</td>
+				<td ><input type="radio" name="buy_sell" value="sell"/></td><td>Sell</td>
+			</tr>
+			</table>
+			</td>
+			
+		</tr>
+ 		<tr>
+			<td>
+				<input type="submit" value="Submit" class="submit" style="width:100px;">
+			</td>
+		</tr> 
+
+</form>
+</table>
+</div>
+
+<script type="text/javascript" src="scripts/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.mockjax.js"></script>
+<script type="text/javascript" src="src/jquery.autocomplete.js"></script>
+<script type="text/javascript" src="scripts/countries.js"></script>
+<script type="text/javascript" src="scripts/demo.js"></script>
+</body>
+</html>
